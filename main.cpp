@@ -3,8 +3,8 @@
 
 /*
 Tutorial Topics:
--parents
--QGraphicsTextItem, setPlainText(), setFont(),setDefaultTextColor()
+-resource files
+-QMediaPlayer, setMedia(), QUrl, play()
 */
 
 Game * game;
