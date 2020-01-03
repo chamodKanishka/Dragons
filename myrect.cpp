@@ -1,6 +1,9 @@
 #include "myrect.h"
+#include <QGraphicsScene>
 #include <QKeyEvent>
+#include "bullet.h"
 
+#include <QDebug>
 void MyRect::keyPressEvent(QKeyEvent *event){
     if (event->key() == Qt::Key_Left){
         setPos(x()-10,y());
@@ -13,5 +16,11 @@ void MyRect::keyPressEvent(QKeyEvent *event){
     }
     else if (event->key() == Qt::Key_Down){
         setPos(x(),y()+10);
+    }
+    else if (event->key() == Qt::Key_Space){
+        // create a bullet
+        Bullet * bullet = new Bullet();
+        bullet->setPos(x(),y());
+        scene()->addItem(bullet);
     }
 }

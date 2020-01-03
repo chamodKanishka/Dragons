@@ -5,9 +5,9 @@
 
 /*
 Tutorial Topics:
--events (keyPressEvent() and QKeyEvent)
--event propogation system
--QDebug
+-QTimer
+-signals and slots (connect function)
+-QObject and Q_OBJECT macro
 */
 
 int main(int argc, char *argv[]){
@@ -29,9 +29,14 @@ int main(int argc, char *argv[]){
 
     // create a view to visualize the scene
     QGraphicsView * view = new QGraphicsView(scene);
+    view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     // show the view
     view->show();
+
+    //==new code==
+
 
     return a.exec();
 }
