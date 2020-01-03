@@ -2,12 +2,12 @@
 #include "myrect.h"
 #include <QGraphicsScene>
 #include <QGraphicsView>
+#include <QTimer>
 
 /*
 Tutorial Topics:
--QGraphicsScene's sceneRect
--QGraphicView's sceneRect
--QGraphicView coordinates vs QGraphicScene coordinates vs QGraphicItem coordinates
+-collidingItems() <- new topic
+-QTimer and coordinate systems <- old topics (review)
 */
 
 int main(int argc, char *argv[]){
@@ -38,6 +38,11 @@ int main(int argc, char *argv[]){
     scene->setSceneRect(0,0,800,600);
 
     player->setPos(view->width()/2,view->height() - player->rect().height());
+
+    // spawn enemies
+    QTimer * timer = new QTimer();
+    QObject::connect(timer,SIGNAL(timeout()),player,SLOT(spawn()));
+    timer->start(2000);
 
     return a.exec();
 }
