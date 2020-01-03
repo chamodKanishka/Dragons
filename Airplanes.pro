@@ -27,11 +27,19 @@ SOURCES += \
         main.cpp \
     myrect.cpp \
     bullet.cpp \
-    enemy.cpp
+    enemy.cpp \
+    game.cpp \
+    health.cpp \
+    player.cpp \
+    score.cpp
 
 HEADERS += \
     myrect.h \
     bullet.h \
-    enemy.h
+    enemy.h \
+    game.h \
+    health.h \
+    player.h \
+    score.h
 
 FORMS +=
