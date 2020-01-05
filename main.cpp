@@ -3,8 +3,7 @@
 
 /*
 Tutorial Topics:
--resource files
--QMediaPlayer, setMedia(), QUrl, play()
+-QGraphicsPixmapItem, QPixmap, QImage
 */
 
 Game * game;

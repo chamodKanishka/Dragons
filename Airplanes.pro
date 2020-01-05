@@ -43,3 +43,6 @@ HEADERS += \
     score.h
 
 FORMS +=
+
+RESOURCES += \
+    res.qrc
