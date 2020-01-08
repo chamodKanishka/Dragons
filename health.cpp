@@ -14,6 +14,10 @@ Health::Health(QGraphicsItem *parent): QGraphicsTextItem(parent){
 void Health::decrease(){
     health--;
     setPlainText(QString("Health: ") + QString::number(health)); // Health: 2
+    if(health == -1){
+        gameover = new GameOver();
+        gameover->show();
+    }
 }
 
 int Health::getHealth(){

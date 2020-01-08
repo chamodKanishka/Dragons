@@ -31,7 +31,8 @@ SOURCES += \
     game.cpp \
     health.cpp \
     player.cpp \
-    score.cpp
+    score.cpp \
+    gameover.cpp
 
 HEADERS += \
     myrect.h \
@@ -40,9 +41,11 @@ HEADERS += \
     game.h \
     health.h \
     player.h \
-    score.h
+    score.h \
+    gameover.h
 
-FORMS +=
+FORMS += \
+    gameover.ui
 
 RESOURCES += \
     res.qrc
